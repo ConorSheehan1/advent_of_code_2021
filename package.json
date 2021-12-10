@@ -7,12 +7,14 @@
     "test": "mocha \"./test/*.test.js\"",
     "lint": "prettier --list-different --write \"**/*.js\""
   },
+  "precommit": ["lint"],
   "author": "conor.sheehan.dev@gmail.com",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "chai": "^4.3.4",
     "lodash": "^4.17.21",
     "mocha": "^9.1.3",
-    "prettier": "^2.5.0"
+    "prettier": "^2.5.0",
+    "pre-commit": "^1.2.2"
   }
 }
