@@ -43,7 +43,7 @@ const part2 = (moves) => {
     return horizontalPosition * depthPosition;
 };
 
-const data = fs.readFileSync("./day2_input.txt", "utf8");
+const data = fs.readFileSync("./data/day2_input.txt", "utf8");
 const parsedData = data.split("\n");
 console.log(`Part1: ${part1(parsedData)}`);
 console.log(`Part2: ${part2(parsedData)}`);

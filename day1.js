@@ -24,7 +24,7 @@ const part2 = (numbers) => {
     return sumIncreased;
 };
 
-const data = fs.readFileSync("./day1_input.txt", "utf8");
+const data = fs.readFileSync("./data/day1_input.txt", "utf8");
 const parsedData = data.split("\n").map((n) => parseInt(n));
 console.log(`Part1: ${part1(parsedData)}`);
 console.log(`Part2: ${part2(parsedData)}`);
