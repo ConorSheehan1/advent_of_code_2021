@@ -1,7 +1,5 @@
 const fs = require("fs");
-
-// https://stackoverflow.com/a/36164530/6305204
-const transpose = (m) => m[0].map((x, i) => m.map((x) => x[i]));
+const { transpose } = require("./utils");
 
 // https://stackoverflow.com/a/1053865/6305204
 function mode(array) {
