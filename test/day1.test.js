@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const { part1, part2 } = require("../day1.js");
+const { part1, part2 } = require("../src/day1.js");
 const testData = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263];
 
 describe("day1", function () {

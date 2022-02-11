@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 const fs = require("fs");
-const { part1, part2 } = require("../day4.js");
+const { part1, part2 } = require("../src/day4.js");
 
 const data = fs.readFileSync("./data/day4_test_input.txt", "utf8");
 const rawLines = data.split("\n");

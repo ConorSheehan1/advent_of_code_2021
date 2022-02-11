@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const { part1, part2 } = require("../day3.js");
+const { part1, part2 } = require("../src/day3.js");
 
 const testData = [
     "00100",
