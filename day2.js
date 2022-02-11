@@ -1,5 +1,3 @@
-const fs = require("fs");
-
 const part1 = (moves) => {
     let horizontalPosition = 0;
     let depthPosition = 0;
@@ -42,11 +40,6 @@ const part2 = (moves) => {
     }
     return horizontalPosition * depthPosition;
 };
-
-const data = fs.readFileSync("./data/day2_input.txt", "utf8");
-const parsedData = data.split("\n");
-console.log(`Part1: ${part1(parsedData)}`);
-console.log(`Part2: ${part2(parsedData)}`);
 
 module.exports = {
     part1,

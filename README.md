@@ -3,8 +3,8 @@ https://adventofcode.com/2021/
 
 ### run
 ```bash
-node ./day${n}.js
-# e.g. node ./day1.js
+node run.js $dayNumber
+# e.g. node run.js 1
 ```
 
 ### lint

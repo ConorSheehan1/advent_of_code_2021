@@ -1,4 +1,3 @@
-const fs = require("fs");
 const { transpose } = require("./utils");
 
 const parseData = (lines) => {
@@ -39,7 +38,11 @@ const bingo = ({ numbersToDraw, boards }) => {
             const transposedBoard = transposedBoards[k];
             for (column of transposedBoard) {
                 if (column.every((n) => numbersDrawn.includes(n))) {
-                    return { boardIndex: k, board: transposedBoard, numbersDrawn };
+                    return {
+                        boardIndex: k,
+                        board: transposedBoard,
+                        numbersDrawn,
+                    };
                 }
             }
         }
@@ -69,21 +72,18 @@ const part2 = (rawLines) => {
     let finalBoard;
     let finalNumbers;
     while (boards.length != 0) {
-        const { boardIndex, board, numbersDrawn } = bingo({ numbersToDraw, boards });
+        const { boardIndex, board, numbersDrawn } = bingo({
+            numbersToDraw,
+            boards,
+        });
         boards.splice(boardIndex, 1);
         if (boards.length === 0) {
             finalBoard = board;
             finalNumbers = numbersDrawn;
         }
     }
-    return calculateScore({ board: finalBoard, numbersDrawn: finalNumbers })
+    return calculateScore({ board: finalBoard, numbersDrawn: finalNumbers });
 };
-
-// TODO: extract every day to main function, run from cli with num as arg, avoid running full during tests.
-const data = fs.readFileSync("./data/day4_input.txt", "utf8");
-const rawLines = data.split("\n");
-console.log(`Part1: ${part1(rawLines)}`);
-console.log(`Part2: ${part2(rawLines)}`);
 
 module.exports = {
     part1,

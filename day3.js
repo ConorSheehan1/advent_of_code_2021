@@ -1,4 +1,3 @@
-const fs = require("fs");
 const { transpose } = require("./utils");
 
 // https://stackoverflow.com/a/1053865/6305204
@@ -59,11 +58,6 @@ const part2 = (binaryNumbers) => {
     );
     return parseInt(o2Rating, 2) * parseInt(co2Rating, 2);
 };
-
-const data = fs.readFileSync("./data/day3_input.txt", "utf8");
-const parsedData = data.split("\n");
-console.log(`Part1: ${part1(parsedData)}`);
-console.log(`Part2: ${part2(parsedData)}`);
 
 module.exports = {
     part1,
