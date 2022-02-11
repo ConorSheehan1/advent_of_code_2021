@@ -11,9 +11,9 @@ describe("day4", function () {
             expect(part1(rawLines)).to.equal(4512);
         });
     });
-    // describe("part2", function () {
-    //     it("should return", function () {
-    //         expect(part2(testData)).to.equal();
-    //     });
-    // });
+    describe("part2", function () {
+        it("should return", function () {
+            expect(part2(rawLines)).to.equal(1924);
+        });
+    });
 });
