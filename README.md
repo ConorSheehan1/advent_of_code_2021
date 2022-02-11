@@ -7,20 +7,20 @@ day=$dayNumber npm run day
 # e.g. day=4 npm run day
 ```
 
-### generate new files
+### generate files for new day
 ```bash
 day=$dayNumber npm run generateAll
-# ne.g. day=4 npm run generateAll
+# e.g. day=4 npm run generateAll
 ```
 
 ### lint
 ```bash
-npm run lint
 # autoformat all .js files
+npm run lint
 ```
 
 ### tests
 ```bash
-npm run test
 # use to ensure code passes on example answers given in the questions
+npm run test
 ```
