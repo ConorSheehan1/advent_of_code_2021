@@ -3,14 +3,14 @@ https://adventofcode.com/2021/
 
 ### run
 ```bash
-node run.js $dayNumber
-# e.g. node run.js 1
+day=$dayNumber npm run day
+# e.g. day=4 npm run day
 ```
 
 ### generate new files
 ```bash
 day=$dayNumber npm run generateAll
-# npm run generate __n__=5
+# ne.g. day=4 npm run generateAll
 ```
 
 ### lint

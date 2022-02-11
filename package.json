@@ -7,7 +7,8 @@
     "test": "mocha \"./test/*.test.js\"",
     "lint": "prettier --list-different --write \"**/*.js\"",
     "generate": "node ./tools/generate.js",
-    "generateAll": "npm run generate src __n__=$day && npm run generate test __n__=$day && npm run generate data __n__=$day"
+    "generateAll": "npm run generate src __n__=$day && npm run generate test __n__=$day && npm run generate data __n__=$day",
+    "day": "node ./run.js $day"
   },
   "precommit": [
     "lint"
@@ -16,12 +17,12 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.3.4",
-    "lodash": "^4.17.21",
+    "generate-template-files": "^3.2.0",
     "mocha": "^9.1.3",
     "prettier": "^2.5.0",
     "pre-commit": "^1.2.2"
   },
   "dependencies": {
-    "generate-template-files": "^3.2.0"
+    "lodash": "^4.17.21"
   }
 }
